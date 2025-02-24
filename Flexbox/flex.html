@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+ flex-flow:column wrap;
+ height: 400px;
+ align-content: center;
+  background-color: DodgerBlue;
+  
+}
+
+.flex-container2 {
+  display: flex;
+ flex-flow:column wrap;
+ height: 400px;
+ align-items: center;
+ justify-content: space-evenly;
+  background-color:rgba(146, 98, 235, 0.486);
+  
+}
+
+.flex-container>div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px; 
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+
+}
+.flex-container2>div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px; 
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex Property</h1>
+
+
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+<div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+  <div>13</div>  
+  <div>14</div>
+  <div>15</div>
+  <div>16</div> 
+</div>
+<div class="flex-container2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+    <div>13</div>  
+    <div>14</div>
+    <div>15</div>
+    <div>16</div> 
+  </div>
+
+<p>Try resizing the browser window!</p>
+
+</body>
+</html>
+
+
+<!--The justify-content property is used to align the flex items when they do not use all available space on the main-axis (horizontally).
+
+The justify-content property can have one of the following values:
+
+center
+flex-start
+flex-end
+space-around
+space-between
+space-evenly-->>
+
+<!--i have did experimentwith these code 
+
+.flex-container {
+  display: flex;
+ flex-flow:row-reverse ;
+ justify-content:flex-start;
+  background-color: DodgerBlue;
+ here when i set flex direction to  row-reverse than it will set to right to left
+ and with this if i set justify-content to  flex-end than it will placed left side of container because the content is setting from right to left its end will be on right side .
+ if i want to placed items to the left of container than i needto set justify-content to flex-start .
+}-->
+
+<!--
+The CSS align-items Property
+The align-items property is used to align the flex items when they do not use all available space on the cross-axis (vertically).
+
+The align-items property can have one of the following values:
+
+center
+flex-start
+flex-end
+stretch
+baseline
+normal
+-->
+ 
+<!--
+The CSS align-content Property
+The align-content property is used to align the flex lines.
+
+The align-content property is similar to align-items, but instead of aligning flex items, it aligns the flex lines.
+
+The align-content property can have one of the following values:
+
+center
+stretch
+flex-start
+flex-end
+space-around
+space-between
+space-evenly
+-->
+
+<!--to see the difference between space around,space-even and space between ,remove margin:10px-->
+ <!--if there are multiple colums than use align content .if align content and align items both used than align content will override align items because of multiple columns-->
+
