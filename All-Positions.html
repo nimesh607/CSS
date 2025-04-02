@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 2000px;
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 60px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .static-box {
+      position: static;
+      background-color: gray;
+    }
+
+    .relative-box {
+      position: relative;
+      left: 100px;
+      background-color: blue;
+    }
+
+    .absolute-wrapper {
+      position: relative; /* So absolute child uses this as reference */
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 0;
+      left: 100px;
+      background-color: red;
+    }
+
+    .fixed-box {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: green;
+      z-index: 999;
+    }
+
+    .label {
+      margin-bottom: -15px;
+      font-size: 14px;
+    }
+
+    .spacer {
+      height: 20px;
+      background: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fixed-box box">Fixed</div>
+
+  <div class="container">
+    <div class="label">Static</div>
+    <div class="static-box box">Static Box</div>
+
+    <div class="label">Relative (left: 100px)</div>
+    <div class="relative-box box">Relative Box</div>
+
+    <div class="label">Absolute (left: 100px)</div>
+    <div class="absolute-wrapper" style="height: 80px;">
+      <div class="absolute-box box">Absolute Box</div>
+    </div>
+
+    <div class="label">Next content block</div>
+    <div class="spacer">This should appear below normally</div>
+  </div>
+
+</body>
+</html>
