@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 200px;
+      height: 60px;
+      margin-bottom: 10px;
+      background-color: lightblue;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .relative-box {
+      position: relative;
+      left: 40px;
+      background-color: lightgreen;
+    }
+
+    .static-box {
+      position: static;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>position: static (default)</h2>
+  <div class="box static-box">
+    Static box (default behavior)
+  </div>
+
+  <h2>position: relative (with left: 40px)</h2>
+  <div class="box relative-box">
+    Relative box (moved 40px right)
+  </div>
+
+  <p>Notice how the green box moved visually but its original space is still taken, so the text below doesn't shift up.</p>
+
+</body>
+</html>
